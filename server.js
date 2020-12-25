@@ -8,13 +8,15 @@ const app = express();
 
 app.use(morgan("dev"));
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static('public'));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
   useFindAndModify: false
 });
 
@@ -22,6 +24,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
 
-app.listen(PORT,function(){ 
-    console.log(`App listening on Port ${PORT}`);
+app.listen(PORT, function () {
+  console.log(`App listening on Port ${PORT}`);
 });
