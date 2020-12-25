@@ -23,7 +23,7 @@ The Fit-ish Workout Tracker app allows the user to view, create and track daily 
   ![Web page](/public/img/screenshot.png)
   
   ## Installation
-  To run the Fit-ish app, naviagte to the link at [heroku](https://Fit-ish-Workout-Tracker.herokuapp.com/login) and open the Fitness Tracker index page to either continue or create a workout. 
+  To run the Fit-ish app, naviagte to the link at [heroku](https://thawing-waters-16745.herokuapp.com) and open the Fitness Tracker index page to either continue or create a workout. 
 
   ## License
   Copyright (c) Microsoft Corporation. All rights reserved.
